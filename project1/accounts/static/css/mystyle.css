@@ -1,0 +1,14 @@
+.style1{
+    border: 2px grey solid;
+    width: 60%;
+    height: 100%;
+    box-shadow: 2px 2px 4px grey;
+    padding:10px;
+    position:relative;
+    left:20%;
+    right:auto;
+    background-color: rgb(254, 254, 255);
+}
+body{
+background-color: #5D6D7E;
+}

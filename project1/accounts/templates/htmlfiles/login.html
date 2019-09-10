@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+<style>
+    .bon{
+      border: green 3px solid;
+    }
+  </style>
+{% block head %}
+  <title>Login page</title>
+{% endblock %}
+
+<body>
+  {% block body %}
+  <div class = 'container'>
+    <div class = 'row'>
+      <div class = 'col-md-4' ></div>
+      <div class = 'col-md-4' style = 'border:green 2px solid;' >
+          <form action="" method="post">
+              {% csrf_token %}
+              {{form.as_p}}
+              <button type="submit">login</button>
+            </form>
+      </div>
+      <div class = 'col-md-4 ' ></div>
+    </div>
+  
+  </div>
+  {% endblock %}
+</body>

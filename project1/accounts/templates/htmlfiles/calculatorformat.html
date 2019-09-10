@@ -1,0 +1,106 @@
+<html>
+
+<script>
+var A,B,sym;
+A = '';
+B = '';
+sym = '';
+var flg = 0;
+
+	function txt2(n)
+	{
+		var txt = document.getElementById('val0').value;
+		document.getElementById('val0').value = txt + n;
+	}
+
+	function clik1(n)
+	{
+		var txt = document.getElementById('val1').value;
+		document.getElementById('val1').value = txt + n;
+		txt2(n);
+		
+	}
+	function clr()
+	{
+		document.getElementById('val1').value = '';
+		
+	}
+	
+	function clr2()
+	{
+		document.getElementById('val0').value = '';
+		clr();
+	}
+	
+	function clik2(s)
+	{
+		if(flg == 0)
+		{
+			A = document.getElementById('val1').value;
+			clr();
+			sym = s;
+			flg = 1;
+			txt2(s);
+		}
+	}
+	
+	function clik3()
+	{
+		B = document.getElementById('val1').value;
+		clr();
+		A = A*1;
+		B = B*1;
+		flg = 0;
+		txt2('=');
+		switch(sym)
+		{
+			case '+':
+				var c = A + B;
+				break;
+			case '-':
+				var c = A - B;
+				break;
+			case '*':
+				var c = A * B;
+			case '/':
+				var c = A / B;	
+				break;
+		}
+		document.getElementById('val1').value = c;
+		txt2(c);
+	}
+		
+</script>
+<p> <h2>CALCULATOR</h2> </p>
+<input id = 'val0' > <br>
+<input id = 'val1' > 
+<br>
+<table>
+<tr>
+	<td><button onclick = 'clik1(1)'>1</button></td>
+	<td><button onclick = 'clik1(2)'>2</button></td>
+	<td><button onclick = 'clik1(3)'>3</button></td>
+	<td><button onclick = 'clik2("+")'>+</button></td>
+	<td><button onclick = 'clik2("-")'>-</button></td>
+</tr>
+<tr>
+	<td><button onclick = 'clik1(4)'>4</button></td>
+	<td><button onclick = 'clik1(5)'>5</button></td>
+	<td><button onclick = 'clik1(6)'>6</button></td>
+	<td><button onclick = 'clik2("*")'>*</button></td>
+	<td><button onclick = 'clik2("/")'>/</button></td>
+</tr>
+<tr>
+	<td><button onclick = 'clik1(7)'>7</button></td>
+	<td><button onclick = 'clik1(8)'>8</button></td>
+	<td><button onclick = 'clik1(9)'>9</button></td>
+	<td><button onclick = 'clr2()'>C</button></td>
+	<td><button onclick = 'clik3()'>=</button></td>
+</tr>
+<tr>
+	<td> </td>
+	<td><button onclick = 'clik1(0)'>0</button></td>
+</tr>
+
+
+</html>

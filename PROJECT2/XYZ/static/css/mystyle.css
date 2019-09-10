@@ -1,0 +1,12 @@
+.frame1{
+    width: 220px;
+    
+    box-shadow: 2px 2px 4px grey;
+    padding:10px;
+    float:left;
+    margin:10px;
+}
+.frame1 img{
+    width: 200px;
+    height:auto;
+}
